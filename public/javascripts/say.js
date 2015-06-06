@@ -11,6 +11,9 @@ $(document).ready(function(){
 	}
 
 	$("#my_results").hide();
+	$("#math_result").hide();
+	$("#code_container").hide();
+
 
 
 
@@ -52,19 +55,29 @@ $(document).ready(function(){
 
 
 	function drawImage(image){
+		$("#my_results").hide();
+		$("#math_result").hide();
+		$("#code_container").show();
+
+
+
 		console.log("In the image programme")
 		if (image == "circle"){
 			console.log("Circle Activated");
 			$( "#the_circle" ).show( "Shake", {direction:"down"},1000 );
+			draw_circle();
 
 		}
 		else if(image == "triangle"){
 			console.log("Triangle Activated");
+			draw_triangle();
+
 
 		}
 
 		else if(image == "rectangle"){
 			console.log("Rectangle Activated");
+			draw_rect();
 
 		}
 	}
@@ -72,16 +85,33 @@ $(document).ready(function(){
 
 
 	function add_numbers(number_1, number_2){
-		console.log("Called the add numbers function")
-		console.log(number_1);
-		console.log(number_2);
+		console.log("Called the multiply numbers function")
 		console.log(parseInt(number_1)+parseInt(number_2));
-		// console.log(the_numbers[number_1]+the_numbers[number_2]);
+
+		var total = parseInt(number_1)+parseInt(number_2);
+
+
+		$("#math_result").show();
+		var content = '<div id="math_result">print " '+total.toString()+' "</div>';
+		$("#math_result").replaceWith(content);
+
+		//The following code is to display the code
+
+
+
 	}
 
 	function multiply_numbers(number_1, number_2){
 		console.log("Called the multiply numbers function")
-		console.log(parseInt(number_1)+parseInt(number_2));
+		console.log(parseInt(number_1)*parseInt(number_2));
+
+		var total = parseInt(number_1)*parseInt(number_2);
+
+
+		$("#math_result").show();
+		var content = '<div id="math_result">print " '+total.toString()+' "</div>';
+		$("#math_result").replaceWith(content);
+
 	}
 
 

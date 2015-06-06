@@ -97,8 +97,8 @@ $(document).ready(function(){
 
 		//The following code is to display the code
 		var code_1 = '<div class="the_code"> javascript: console.log( "'+number_1+' + '+number_2+' ") "</div>';
-		var code_2 = '<div class="the_code"> python 2.7 : print "'+number_1' + '+number_2+' " "</div>';
-		var code_3 = '<div class="the_code"> python 2.7 : print "'+number_1' + '+number_2+' " "</div>';
+		var code_2 = '<div class="the_code"> python 2.7 : print "'+number_1+' + '+number_2+' " "</div>';
+		var code_3 = '<div class="the_code"> python 2.7 : print "'+number_1+' + '+number_2+' " "</div>';
 
 		$(".the_code").replaceWith(code_1+code_2+code_3)
 

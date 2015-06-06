@@ -15,6 +15,8 @@
 			</div>
 
 			</div>
+
+
 			
 		
 
@@ -27,33 +29,6 @@
 
 {{super()}}
 
-<script>
-			function recognize_snapshot(){
-				document.getElementById('text').innerText = "(Recognizing your command...)"
-				document.getElementById('transcription').className = "recognizing"
-				OCRAD(document.getElementById("video"), {
-				}, function(text){
-					console.log(text.replace(/\W/g, ''));
-
-					document.getElementById('transcription').className = "done"
-					document.getElementById('text').innerText = text || "(empty)";
-				})
-			}
-
-			function acquiredVideo(stream){
-				var video = document.getElementById('video')
-				if ('mozSrcObject' in video) { video.mozSrcObject = stream;
-				} else if (window.webkitURL) { video.src = window.webkitURL.createObjectURL(stream);
-				} else { video.src = stream; }
-				video.play();
-
-				
-			}
-			window.onload = function(){
-				navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
-				if(navigator.getUserMedia) navigator.getUserMedia({ video: true }, acquiredVideo, function(){})
-			}
-		</script>
 
 <script type="text/javascript" src="javascripts/write.js"></script>
 

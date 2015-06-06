@@ -1,113 +1,56 @@
-(function() {
-  
-  var width = 320;    // We will scale the photo width to this
-  var height = 0;     // This will be computed based on the input stream
 
-  // this indicates whether or not we're currently streaming
-  var streaming = false;
 
-  // The various HTML elements we need to configure or control. These
-  // will be set by the startup() function.
+  function print_to_screen(word){
+    console.log("Printing to the screen");
+    $("#my_results").show();
+    var content = '<div id="my_results">print " '+word+' "</div>';
+    $("#my_results").replaceWith(content);
 
-  var video = null;
-  var canvas = null;
-  var photo = null;
-  var startbutton = null;
+  }
 
-  function startup() {
-    video = document.getElementById('video');
-    canvas = document.getElementById('canvas');
-    photo = document.getElementById('photo');
-    startbutton = document.getElementById('startbutton');
+  //drawing functions
+  function draw_circle(){
+    $(".the_shapes").hide();
+    $( "#the_circle" ).show( "shake", {direction:"down"},1000 );
+  }
 
-    navigator.getMedia = ( navigator.getUserMedia ||
-                           navigator.webkitGetUserMedia ||
-                           navigator.mozGetUserMedia ||
-                           navigator.msGetUserMedia);
-
-    navigator.getMedia(
-      {
-        video: true,
-        audio: false
-      },
-      function(stream) {
-        if (navigator.mozGetUserMedia) {
-          video.mozSrcObject = stream;
-        } else {
-          var vendorURL = window.URL || window.webkitURL;
-          video.src = vendorURL.createObjectURL(stream);
-        }
-        video.play();
-      },
-      function(err) {
-        console.log("An error occured! " + err);
-      }
-    );
-
-    video.addEventListener('canplay', function(ev){
-      if (!streaming) {
-        height = video.videoHeight / (video.videoWidth/width);
-      
-        // Firefox currently has a bug where the height can't be read from
-        // the video, so we will make assumptions if this happens.
-      
-        if (isNaN(height)) {
-          height = width / (4/3);
-        }
-      
-        video.setAttribute('width', width);
-        video.setAttribute('height', height);
-        canvas.setAttribute('width', width);
-        canvas.setAttribute('height', height);
-        streaming = true;
-      }
-    }, false);
-
-    startbutton.addEventListener('click', function(ev){
-      takepicture();
-      ev.preventDefault();
-    }, false);
+  function draw_rect(){
+    $(".the_shapes").hide();
+    $( "#the_rectangle" ).show( "shake", {direction:"down"},1000 );
     
-    clearphoto();
   }
 
-  // Fill the photo with an indication that none has been
-  // captured.
-
-  function clearphoto() {
-    var context = canvas.getContext('2d');
-    context.fillStyle = "#AAA";
-    context.fillRect(0, 0, canvas.width, canvas.height);
-
-    var data = canvas.toDataURL('image/png');
-    photo.setAttribute('src', data);
-  }
-  
-  // Capture a photo by fetching the current contents of the video
-  // and drawing it into a canvas, then converting that to a PNG
-  // format data URL. By drawing it on an offscreen canvas and then
-  // drawing that to the screen, we can change its size and/or apply
-  // other changes before drawing it.
-
-  function takepicture() {
-    var context = canvas.getContext('2d');
-    if (width && height) {
-      canvas.width = width;
-      canvas.height = height;
-      context.drawImage(video, 0, 0, width, height);
-      var data = canvas.toDataURL('image/png');
-      var image = new Image();
-      image.src = data;
-      var string = OCRAD(canvas);
-      console.log(string);
-      console.log(typeof image);
-      photo.setAttribute('src', data);
-    } else {
-      clearphoto();
-    }
+  function draw_triangle(){
+    $(".the_shapes").hide();
+    $( "#the_triangle" ).show( "shake", {direction:"down"},1000 );
+    
   }
 
-  // Set up our event listener to run the startup process
-  // once loading is complete.
-  window.addEventListener('load', startup, false);
-})();
+  function recognize_snapshot(){
+        document.getElementById('text').innerText = "(Recognizing your command...)"
+        document.getElementById('transcription').className = "recognizing"
+        OCRAD(document.getElementById("video"), {
+        }, function(text){
+          console.log(text.replace(/\W/g, ''));
+
+          document.getElementById('transcription').className = "done"
+          document.getElementById('text').innerText = text || "(empty)";
+        })
+      }
+
+      function acquiredVideo(stream){
+        var video = document.getElementById('video')
+        if ('mozSrcObject' in video) { video.mozSrcObject = stream;
+        } else if (window.webkitURL) { video.src = window.webkitURL.createObjectURL(stream);
+        } else { video.src = stream; }
+        video.play();
+
+        
+      }
+      window.onload = function(){
+        navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+        if(navigator.getUserMedia) navigator.getUserMedia({ video: true }, acquiredVideo, function(){})
+      }
+
+
+

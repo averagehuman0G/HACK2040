@@ -193,13 +193,9 @@ $(document).ready(function(){
 		
 	}
 
-	function hideEverything(){
-		$('#allContent').hide();
-	}
 
-	$('#hideEverything').click(function(){
+	$('#hide').click(function(){
 		$('#allContent').hide();
-
 	})
 
 

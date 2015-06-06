@@ -114,7 +114,7 @@ $(document).ready(function(){
 	function print_to_screen(word){
 		console.log("Printing to the screen");
 		$("#my_results").show();
-		var content = '<div id="my_results">print " '+word' "</div>';
+		var content = '<div id="my_results">print " '+word+' "</div>';
 		$("#my_results").replaceWith(content);
 
 	}

@@ -95,8 +95,11 @@
       canvas.width = width;
       canvas.height = height;
       context.drawImage(video, 0, 0, width, height);
-    
       var data = canvas.toDataURL('image/png');
+      var image = new Image();
+      image.src = data;
+      //var string = OCRAD(data);
+      console.log(typeof data);
       photo.setAttribute('src', data);
     } else {
       clearphoto();

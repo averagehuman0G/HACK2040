@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html>
-    <body>
-        <button type="button" class="btn btn-success btn-lg btn-block">Draw A Rectangle</button>
-        <button type="button" class="btn btn-success btn-lg btn-block">Print Your Name</button>
-        <button type="button" class="btn btn-success btn-lg btn-block">Add Two Numbers</button>
-        <button type="button" class="btn btn-success btn-lg btn-block">Multiply Numbers</button>
+{% extends "layout.html"%}
+{% block content %} 
 
-    </body>
-</html>
+        <h1 id="activityHeading">Choose Your activity</h1>
+        <p>Once you have chosen your activity you will be instructed step by step on how to write, say or color your code. </p>
+        <hr>
+        <button type="button" class="btn btn-success btn-lg btn-block"><a href="instructionsRectangle.html">Draw A Rectangle</a></button>
+        <button type="button" class="btn btn-success btn-lg btn-block"><a href="#">Print Your Name</a></button>
+        <button type="button" class="btn btn-success btn-lg btn-block"><a href="#">Add Two Numbers</a></button>
+        <button type="button" class="btn btn-success btn-lg btn-block"><a href="#">Multiply Numbers</a></button>
+{% endblock %} 

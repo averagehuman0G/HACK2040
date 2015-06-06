@@ -92,10 +92,15 @@ $(document).ready(function(){
 
 
 		$("#math_result").show();
-		var content = '<div id="math_result">print " '+total.toString()+' "</div>';
+		var content = '<div id="math_result"> The Result is: '+total.toString()+' "</div>';
 		$("#math_result").replaceWith(content);
 
 		//The following code is to display the code
+		var code_1 = '<div class="the_code"> javascript: console.log( "'+number_1+' + '+number_2+' ") "</div>';
+		var code_2 = '<div class="the_code"> python 2.7 : print "'+number_1+' + '+number_2+' " "</div>';
+		var code_3 = '<div class="the_code"> python 2.7 : print "'+number_1+' + '+number_2+' " "</div>';
+
+		$(".the_code").replaceWith(code_1+code_2+code_3)
 
 
 
@@ -112,6 +117,15 @@ $(document).ready(function(){
 		var content = '<div id="math_result">print " '+total.toString()+' "</div>';
 		$("#math_result").replaceWith(content);
 
+		var code_1 = '<div class="the_code"> javascript: console.log( "'+number_1+' + '+number_2+' ") "</div>';
+		var code_2 = '<div class="the_code"> python 2.7 : print "'+number_1+' + '+number_2+' " "</div>';
+		var code_3 = '<div class="the_code"> python 2.7 : print "'+number_1+' + '+number_2+' " "</div>';
+
+		$(".the_code").replaceWith(code_1+code_2+code_3)
+
+
+
+
 	}
 
 
@@ -123,8 +137,20 @@ $(document).ready(function(){
 	function print_to_screen(word){
 		console.log("Printing to the screen");
 		$("#my_results").show();
-		var content = '<div id="my_results">print " '+word+' "</div>';
+		var content = '<div id="my_results"word: '+word+' "</div>';
 		$("#my_results").replaceWith(content);
+
+
+		var code_1 = '<div class="the_code"> javascript: console.log( "'+word+' ") "</div>';
+		var code_2 = '<div class="the_code"> python 2.7 : print "'+word+' " "</div>';
+		var code_3 = '<div class="the_code"> python 2.7 : print "'+word+' " "</div>';
+
+		$(".the_code").replaceWith(code_1+code_2+code_3)
+
+
+
+
+
 
 	}
 
@@ -135,21 +161,41 @@ $(document).ready(function(){
 	function draw_circle(){
 		$(".the_shapes").hide();
 		$( "#the_circle" ).show( "shake", {direction:"down"},1000 );
+
+		//the drawing code
+
+		var code_1 = '<div class="the_code"> processing: circle(100,100,100,100) </div>';
+
+		$(".the_code").replaceWith(code_1)
+
+
+
+
 	}
 
 	function draw_rect(){
 		$(".the_shapes").hide();
 		$( "#the_rectangle" ).show( "shake", {direction:"down"},1000 );
+
+		var code_1 = '<div class="the_code"> processing: rect(100,100,100,100) </div>';
+
+		$(".the_code").replaceWith(code_1)
 		
 	}
 
 	function draw_triangle(){
 		$(".the_shapes").hide();
 		$( "#the_triangle" ).show( "shake", {direction:"down"},1000 );
+
+		var code_1 = '<div class="the_code"> processing: triangle(30, 75, 58, 20, 86, 75) </div>';
+
+		$(".the_code").replaceWith(code_1)
 		
 	}
 
-
+	function hideEverything(){
+		$('#allContent').hide();
+	}
 
 
 

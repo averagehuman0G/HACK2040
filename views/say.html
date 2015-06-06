@@ -2,10 +2,11 @@
 
 {% block content%}
         <h1>Choose Your activity</h1>
+        <div id="allContent">
         <p id="instructions1">Once you have chosen your activity you will be instructed step by step on how to say your code. </p>
-
+        <button id="hide" onclick="hideEverything()" class="btn btn-default">Hide Everything</button>
         
-        <input onclick="responsiveVoice.speak($('#instructions1').text(),'US English Female');" type="button"  value="Speak the instructions" />
+        <input class="btn btn-default" onclick="responsiveVoice.speak($('#instructions1').text(),'US English Female');" type="button"  value="Speak the instructions" />
         <!--this is the beggining of the navbar-->
         
          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
@@ -19,7 +20,8 @@
     </div>
     <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
       <div class="panel-body">
-        <p>In order to draw a Rectangle with your voice you will need to say the command "Draw Rectangle".</p>
+        <p id="instructions2">In order to draw a Rectangle with your voice you will need to say the command "Draw Rectangle".</p>
+        <input class="btn btn-default" onclick="responsiveVoice.speak($('#instructions2').text(),'US English Female');" type="button"  value="Speak the instructions" />
       </div>
     </div>
   </div>
@@ -33,7 +35,8 @@
     </div>
     <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
       <div class="panel-body">
-         <p>In order to draw a Circle with your voice you will need to say the command "Draw Circle".</p>
+         <p id="instructions3">In order to draw a Circle with your voice you will need to say the command "Draw Circle".</p>
+         <input class="btn btn-default" onclick="responsiveVoice.speak($('#instructions3').text(),'US English Female');" type="button"  value="Speak the instructions" />
       </div>
     </div>
   </div>
@@ -47,19 +50,70 @@
     </div>
     <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
       <div class="panel-body">
-                <p>In order to draw a Triangle with your voice you will need to say the command "Draw Triangle".</p>
+                <p id="instructions4">In order to draw a Triangle with your voice you will need to say the command "Draw Triangle".</p>
+                <input class="btn btn-default" onclick="responsiveVoice.speak($('#instructions4').text(),'US English Female');" type="button"  value="Speak the instructions" />
       </div>
     </div>
   </div>
 </div>
-        
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingFour">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour" class="collapsed btn btn-warning btn-lg btn-block">
+                Print Your Name
+        </a>
+      </h4>
+    </div>
+    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+      <div class="panel-body">
+        <p id="instructions5">In order to print your name with your voice you will need to say the command "Print " and your name.</p>
+        <input class="btn btn-default" onclick="responsiveVoice.speak($('#instructions5).text(),'US English Female');" type="button"  value="Speak the instructions" />
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingFive">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive" class="collapsed btn btn-warning btn-lg btn-block">
+                Add Two Numbers
+        </a>
+      </h4>
+    </div>
+    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+      <div class="panel-body">
+        <p id="instructions6">In order to add two numbers with your voice you will need to say the command "Add " the number "And " the second number.</p>
+        <input class="btn btn-default" onclick="responsiveVoice.speak($('#instructions6').text(),'US English Female');" type="button"  value="Speak the instructions" />
+      </div>
+    </div>
+  </div>
+  
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingSix">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix" class="collapsed btn btn-warning btn-lg btn-block">
+                Multiply Two Numbers
+        </a>
+      </h4>
+    </div>
+    <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+      <div class="panel-body">
+        <p id="instructions7">In order to multiply two numbers with your voice you will need to say the command "Multiply " the number "And " the second number.</p>
+        <input class="btn btn-default" onclick="responsiveVoice.speak($('#instructions7').text(),'US English Female');" type="button"  value="Speak the instructions" />
+      </div>
+    </div>
+  </div>
+  
+        </div>
         <!--this is the end of the navbar-->
         
         <div id="my_results"></div>
 
         <div id="math_result" ></div>
         <div id="code_container">
-            <div id="the_code">Displayed below are sample code from different languages that could be used to create the object Above</div>
+            <div >Displayed below are sample code from different languages that could be used to create the object Above</div>
+            <div class = "the_code"></div>
             <div>Visit codeacademy.org to learn more about coding</div>
         </div>
 

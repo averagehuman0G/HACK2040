@@ -197,6 +197,11 @@ $(document).ready(function(){
 		$('#allContent').hide();
 	}
 
+	$('#hideEverything').click(function(){
+		$('#allContent').hide();
+
+	})
+
 
 
 

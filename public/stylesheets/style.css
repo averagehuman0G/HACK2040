@@ -6,6 +6,10 @@ body {
 a {
   color: #00B7FF;
 }
-.HeadingInJumbotron {
+#HeadingInJumbotron {
   text-align:center;
+}
+.blockbuttons{
+  padding:50px;
+  margin:50px;
 }

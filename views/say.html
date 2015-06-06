@@ -1,10 +1,60 @@
 {% extends "layout.html"%}
 
 {% block content%}
-        
+        <h1>Choose Your activity</h1>
+        <p id="instructions1">Once you have chosen your activity you will be instructed step by step on how to say your code. </p>
 
-        <p id="instructions">To draw shapes use the command draw followed by the shape you will like to draw. You can say shapes like triangle, circle or rectangle.</p>
-        <input onclick="responsiveVoice.speak($('#instructions').text(),'US English Female');" type="button"  value="Speak the instructions" />
+        
+        <input onclick="responsiveVoice.speak($('#instructions1').text(),'US English Female');" type="button"  value="Speak the instructions" />
+        <!--this is the beggining of the navbar-->
+        
+         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="collapsed btn btn-success btn-lg btn-block">
+                 Draw A Rectangle
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+        <p>In order to draw a Rectangle with your voice you will need to say the command "Draw Rectangle".</p>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed btn btn-success btn-lg btn-block" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" >
+                  Draw A Circle
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+         <p>In order to draw a Circle with your voice you will need to say the command "Draw Circle".</p>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed btn btn-success btn-lg btn-block" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree" >
+                Draw A Triangle
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+                <p>In order to draw a Triangle with your voice you will need to say the command "Draw Triangle".</p>
+      </div>
+    </div>
+  </div>
+</div>
+        
+        <!--this is the end of the navbar-->
+        
         <div id="my_results"></div>
 
         <div id="math_result" ></div>

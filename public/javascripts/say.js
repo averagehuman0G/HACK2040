@@ -149,7 +149,9 @@ $(document).ready(function(){
 		
 	}
 
-
+	function hideEverything(){
+		$('#allContent').hide();
+	}
 
 
 

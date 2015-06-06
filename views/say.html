@@ -2,8 +2,9 @@
 
 {% block content%}
         <h1>Choose Your activity</h1>
+        <div id="allContent">
         <p id="instructions1">Once you have chosen your activity you will be instructed step by step on how to say your code. </p>
-
+        <button id="hideEverything" onclick="hideEverything()">Hide Everything</button>
         
         <input class="btn btn-default" onclick="responsiveVoice.speak($('#instructions1').text(),'US English Female');" type="button"  value="Speak the instructions" />
         <!--this is the beggining of the navbar-->
@@ -104,7 +105,7 @@
     </div>
   </div>
   
-        
+        </div>
         <!--this is the end of the navbar-->
         
         <div id="my_results"></div>

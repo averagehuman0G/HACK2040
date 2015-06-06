@@ -12,6 +12,8 @@ $(document).ready(function(){
 
 	$("#my_results").hide();
 	$("#math_result").hide();
+	$("#code_container").hide();
+
 
 
 
@@ -55,6 +57,8 @@ $(document).ready(function(){
 	function drawImage(image){
 		$("#my_results").hide();
 		$("#math_result").hide();
+		$("#code_container").show();
+
 
 
 		console.log("In the image programme")
@@ -90,6 +94,11 @@ $(document).ready(function(){
 		$("#math_result").show();
 		var content = '<div id="math_result">print " '+total.toString()+' "</div>';
 		$("#math_result").replaceWith(content);
+
+		//The following code is to display the code
+
+
+
 	}
 
 	function multiply_numbers(number_1, number_2){

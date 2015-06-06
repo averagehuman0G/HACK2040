@@ -98,8 +98,9 @@
       var data = canvas.toDataURL('image/png');
       var image = new Image();
       image.src = data;
-      //var string = OCRAD(data);
-      console.log(typeof data);
+      var string = OCRAD(canvas);
+      console.log(string);
+      console.log(typeof image);
       photo.setAttribute('src', data);
     } else {
       clearphoto();

@@ -14,4 +14,10 @@ router.get('/say', function(req, res, next) {
   res.render('say.html', { title: 'Express' });
 });
 
+router.get('/test', function(req, res, next) {
+  res.render('test.html', { title: 'Express' });
+});
+
+
+
 module.exports = router;

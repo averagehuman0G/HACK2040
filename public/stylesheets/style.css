@@ -12,3 +12,17 @@ a {
 h1{
   text-align:center;
 }
+
+#transcription, #video {
+		background: white;
+		display: inline-block;
+		border: 2px solid #ddd;
+		margin: 10px;
+}
+
+#video {
+		
+				width: 500px;
+				flex-grow: 1;
+				background: black;
+}

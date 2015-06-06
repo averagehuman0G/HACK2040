@@ -3,9 +3,6 @@
     <head>
         <link rel="stylesheet" href="../stylesheets/style.css" type="text/css" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="javascripts/MainJavascript.js"></script>
-        <script type="text/javascript" src="javascripts/ocrad.js"></script>
         <title>WriteSay</title>
     </head>
 
@@ -33,11 +30,19 @@
 
     </body>
 
-    <div id="footer">
+    {% block footer%}
+
+    <div class="footer">
       <div class="container">
             <p>Built by Team Awesome</p>
       </div>
     </div>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="javascripts/MainJavascript.js"></script>
+    <script type="text/javascript" src="javascripts/ocrad.js"></script>
+
+    {% endblock %}
 </html>
 
 

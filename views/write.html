@@ -1,0 +1,36 @@
+{% extends "layout.html"%}
+{% block content%}
+
+
+
+
+	<div class="container">
+
+		<div class="row">
+			<div class="col-md-5">
+				<video id="video">Video stream not available.</video>
+    			<button class="btn btn-primary" id="startbutton">Take photo</button>
+				
+			</div>
+			<canvas id="canvas">
+				
+			</canvas>
+			<div class="col-md-5" id="output">
+
+				<img id="photo" alt="The screen capture will appear in this box.">
+				
+			</div>
+		</div>
+
+	</div>
+  				
+
+{% endblock %}
+
+{% block footer%}
+
+{{supper()}}
+<script type="text/javascript" src="javascripts/write.js"></script>
+
+{% endblock %}
+

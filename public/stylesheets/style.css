@@ -27,9 +27,7 @@ h1{
 		background: black;
 }
 #logo{
-	width:100px;
-	height:50px;
-	float:left;
+
 }
 
 #the_rectangle{
@@ -40,4 +38,5 @@ h1{
 	width: 400px;
 	text-align: center;
 	margin: auto;
+>>>>>>> 47e5795b77c6c81acdd938e98d2ee6c6d42639e0
 }

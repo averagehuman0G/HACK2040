@@ -85,6 +85,7 @@ $(document).ready(function(){
 
 
 	function add_numbers(number_1, number_2){
+		$(".the_shapes").hide();
 		console.log("Called the multiply numbers function")
 		console.log(parseInt(number_1)+parseInt(number_2));
 
@@ -107,6 +108,7 @@ $(document).ready(function(){
 	}
 
 	function multiply_numbers(number_1, number_2){
+		$(".the_shapes").hide();
 		console.log("Called the multiply numbers function")
 		console.log(parseInt(number_1)*parseInt(number_2));
 
@@ -167,7 +169,7 @@ $(document).ready(function(){
 		var code_1 = '<div class="the_code"> processing: circle(100,100,100,100) </div>';
 
 		$(".the_code").replaceWith(code_1)
-
+		success();
 
 
 
@@ -180,7 +182,7 @@ $(document).ready(function(){
 		var code_1 = '<div class="the_code"> processing: rect(100,100,100,100) </div>';
 
 		$(".the_code").replaceWith(code_1)
-		
+		success();
 	}
 
 	function draw_triangle(){
@@ -190,13 +192,17 @@ $(document).ready(function(){
 		var code_1 = '<div class="the_code"> processing: triangle(30, 75, 58, 20, 86, 75) </div>';
 
 		$(".the_code").replaceWith(code_1)
-		
+		success();
 	}
 
 
 	$('#hideEverything').click(function(){
 		$('#allContent').hide();
 	})
+	
+	function success(){
+		$("#success").text(<div class="alert alert-success">Success! Well done its submitted.</div>);
+	}
 
 
 

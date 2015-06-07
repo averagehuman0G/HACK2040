@@ -98,10 +98,11 @@ textarea {
    ========================================================================== */
 
    .the_shapes{
+    margin: 30px;
     display: none;
     /*position: absolute;*/
-    left :30%;
-    top: 30%;
+/*    left :60%;
+    top: 30%;*/
     width: 300px;
     height: auto
    }

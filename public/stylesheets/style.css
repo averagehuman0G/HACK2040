@@ -6,8 +6,10 @@ body {
 a {
   color: #00B7FF;
 }
-#HeadingInJumbotron {
-  text-align:center;
+#jumbotronLogo{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
 }
 h1{
   text-align:center;
@@ -27,7 +29,9 @@ h1{
 		background: black;
 }
 #logo{
-
+margin-top:-10px;
+height:45px;
+width:150px;
 }
 
 #the_rectangle{
@@ -38,5 +42,4 @@ h1{
 	width: 400px;
 	text-align: center;
 	margin: auto;
->>>>>>> 47e5795b77c6c81acdd938e98d2ee6c6d42639e0
 }

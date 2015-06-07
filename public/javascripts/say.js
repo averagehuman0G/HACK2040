@@ -201,7 +201,7 @@ $(document).ready(function(){
 	})
 	
 	function success(){
-		$("#success").text(<div class="alert alert-success">Success! Well done its submitted.</div>);
+		$("#success").text('<div class="alert alert-success">Success! Well done its submitted.</div>');
 	}
 
 

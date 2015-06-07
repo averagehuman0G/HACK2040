@@ -99,7 +99,7 @@ textarea {
 
    .the_shapes{
     display: none;
-    position: absolute;
+    /*position: absolute;*/
     left :30%;
     top: 30%;
     width: 300px;

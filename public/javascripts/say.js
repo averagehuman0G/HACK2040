@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	// draw_circle();
 	the_numbers = { 'one': 1,
 	'two': 2,
 	'three': 3,
@@ -162,14 +163,15 @@ $(document).ready(function(){
 
 	function draw_circle(){
 		$(".the_shapes").hide();
-		$( "#the_circle" ).show( "shake", {direction:"down"},1000 );
+		$( "#the_circle" ).show();
 
 		//the drawing code
 
 		var code_1 = '<div class="the_code"> processing: circle(100,100,100,100) </div>';
 
-		$(".the_code").replaceWith(code_1)
-		success();
+		$(".the_code").replaceWith(code_1);
+		
+		// success();
 
 
 
@@ -201,7 +203,8 @@ $(document).ready(function(){
 	})
 	
 	function success(){
-		$("#success").text(<div class="alert alert-success">Success! Well done its submitted.</div>);
+
+		$("#success").replaceWith('<div class="alert alert-success">Welldone!!!</div>');
 	}
 
 

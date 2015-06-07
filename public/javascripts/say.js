@@ -203,8 +203,12 @@ $(document).ready(function(){
 	})
 	
 	function success(){
+<<<<<<< HEAD
 
 		$("#success").replaceWith('<div class="alert alert-success">Welldone!!!</div>');
+=======
+		$("#success").text('<div class="alert alert-success">Success! Well done its submitted.</div>');
+>>>>>>> 2aeb676b52b2c537cc436bd5d1282716ceae1504
 	}
 
 

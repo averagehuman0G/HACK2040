@@ -27,7 +27,16 @@ h1{
 		background: black;
 }
 #logo{
-	width: 300px;
-	
-	
+
+}
+
+#the_rectangle{
+	display: none;
+}
+
+.the_butts{
+	width: 400px;
+	text-align: center;
+	margin: auto;
+>>>>>>> 47e5795b77c6c81acdd938e98d2ee6c6d42639e0
 }

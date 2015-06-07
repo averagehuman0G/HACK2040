@@ -85,6 +85,7 @@ $(document).ready(function(){
 
 
 	function add_numbers(number_1, number_2){
+		$(".the_shapes").hide();
 		console.log("Called the multiply numbers function")
 		console.log(parseInt(number_1)+parseInt(number_2));
 
@@ -107,6 +108,7 @@ $(document).ready(function(){
 	}
 
 	function multiply_numbers(number_1, number_2){
+		$(".the_shapes").hide();
 		console.log("Called the multiply numbers function")
 		console.log(parseInt(number_1)*parseInt(number_2));
 

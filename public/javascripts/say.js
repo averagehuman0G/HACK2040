@@ -167,9 +167,9 @@ $(document).ready(function(){
 
 		//the drawing code
 
-		var code_1 = '<div class="the_code"> processing: circle(100,100,100,100) </div>';
+		var code_1 = '<div id="the_code"> processing: circle(100,100,100,100) </div>';
 
-		$(".the_code").replaceWith(code_1);
+		$("#the_code").replaceWith(code_1);
 		
 		// success();
 
@@ -203,12 +203,9 @@ $(document).ready(function(){
 	})
 	
 	function success(){
-<<<<<<< HEAD
 
 		$("#success").replaceWith('<div class="alert alert-success">Welldone!!!</div>');
-=======
 		$("#success").text('<div class="alert alert-success">Success! Well done its submitted.</div>');
->>>>>>> 2aeb676b52b2c537cc436bd5d1282716ceae1504
 	}
 
 

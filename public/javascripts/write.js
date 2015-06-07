@@ -37,11 +37,11 @@
         }, function(text){
 
           cleanString = text.replace(/\W/g, '');
-          
+          document.getElementById('text').innerText = cleanString || "(empty)";
           draw_rect();
 
-          document.getElementById('transcription').className = "done"
-          document.getElementById('text').innerText = cleanString || "(empty)";
+          /*document.getElementById('transcription').className = "done"*/
+          
         })
       }
 

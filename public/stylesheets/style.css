@@ -31,3 +31,13 @@ h1{
 	height:50px;
 	float:left;
 }
+
+#the_rectangle{
+	display: none;
+}
+
+.the_butts{
+	width: 400px;
+	text-align: center;
+	margin: auto;
+}

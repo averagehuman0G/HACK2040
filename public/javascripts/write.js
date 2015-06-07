@@ -27,14 +27,21 @@
   }
 
   function recognize_snapshot(){
+        var drawRectangle = "draw rectangle";
+        var drawCircle = "draw circle";
+        var drawTriangle = "draw triangle";
+
         document.getElementById('text').innerText = "(Recognizing your command...)"
         document.getElementById('transcription').className = "recognizing"
         OCRAD(document.getElementById("video"), {
         }, function(text){
-          console.log(text.replace(/\W/g, ''));
+
+          cleanString = text.replace(/\W/g, '');
+          
+          draw_rect();
 
           document.getElementById('transcription').className = "done"
-          document.getElementById('text').innerText = text || "(empty)";
+          document.getElementById('text').innerText = cleanString || "(empty)";
         })
       }
 

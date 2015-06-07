@@ -244,6 +244,7 @@ th {
   }
   .navbar {
     display: none;
+    padding:50px;
   }
   .btn > .caret,
   .dropup > .btn > .caret {
@@ -4857,7 +4858,7 @@ a.badge:focus {
   margin-left: 3px;
 }
 .jumbotron {
-  padding: 30px 15px;
+  padding: 80px 50px;
   margin-bottom: 30px;
   color: inherit;
   background-color: #eee;

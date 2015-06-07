@@ -13,7 +13,7 @@ h1{
   text-align:center;
 }
 
-#transcription, #video {
+#transcription,#video{
 		background: white;
 		display: inline-block;
 		border: 2px solid #ddd;
@@ -22,7 +22,7 @@ h1{
 
 #video {
 		
-				width: 500px;
-				flex-grow: 1;
-				background: black;
+		width: 90%;
+		flex-grow: 1;
+		background: black;
 }

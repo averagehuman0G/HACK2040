@@ -194,7 +194,7 @@ $(document).ready(function(){
 	}
 
 
-	$('#hide').click(function(){
+	$('#hideEverything').click(function(){
 		$('#allContent').hide();
 	})
 
